@@ -1,4 +1,5 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -8,6 +9,7 @@ import ErrorPage from './pages/errorpage.jsx';
 import ContactPage from './pages/contactpage.jsx';
 import HomePage from './pages/homepage.jsx';
 import ResumePage from './pages/resumepage.jsx';
+import AboutPage from './pages/aboutpage.jsx';
 
 const router = createBrowserRouter([
   // Todo: Define the accessible routes, and which components respond to which URL
@@ -21,15 +23,15 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: '/About',
+        path: '/about',
         element: <AboutPage />,
       },
       {
-        path: '/resumepage',
+        path: '/resume',
         element: <ResumePage />,
       },
       {
-        path: '/contactpage',
+        path: '/contact',
         element: <ContactPage />,
       },
     ],
@@ -39,4 +41,5 @@ const router = createBrowserRouter([
 // Render the RouterProvider component
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
+
 );
